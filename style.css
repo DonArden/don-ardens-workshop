@@ -1,0 +1,161 @@
+:root {
+  --background: #111111;
+  --surface: #1b1b1b;
+  --surface-light: #242424;
+  --text: #f3f0ea;
+  --muted: #c7beb2;
+  --accent: #d7a85f;
+  --max-width: 1080px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--accent);
+}
+
+.hero {
+  min-height: 90vh;
+  padding: 2rem;
+  background:
+    linear-gradient(rgba(17, 17, 17, 0.75), rgba(17, 17, 17, 0.95)),
+    radial-gradient(circle at top left, #3a2a1c, transparent 35%);
+}
+
+.nav {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  margin: 0;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+}
+
+.hero-content {
+  max-width: var(--max-width);
+  margin: 8rem auto 0;
+}
+
+.eyebrow {
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+}
+
+h1 {
+  max-width: 850px;
+  font-size: clamp(2.6rem, 7vw, 5.8rem);
+  margin: 1rem 0;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  margin: 0.5rem 0 1rem;
+}
+
+.intro {
+  max-width: 680px;
+  font-size: 1.25rem;
+  color: var(--muted);
+}
+
+.button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.9rem 1.2rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card,
+.audio-placeholder {
+  background: var(--surface);
+  border: 1px solid var(--surface-light);
+  border-radius: 1.2rem;
+  padding: 1.5rem;
+}
+
+.card ul {
+  padding-left: 1.2rem;
+}
+
+.demo,
+.price,
+.contact {
+  border-top: 1px solid var(--surface-light);
+}
+
+.audio-placeholder {
+  margin-top: 2rem;
+  text-align: center;
+  color: var(--muted);
+}
+
+.audio-placeholder p {
+  margin-bottom: 0.25rem;
+  color: var(--text);
+}
+
+footer {
+  padding: 2rem;
+  text-align: center;
+  color: var(--muted);
+  border-top: 1px solid var(--surface-light);
+}
+
+@media (max-width: 720px) {
+  .hero {
+    min-height: auto;
+  }
+
+  .hero-content {
+    margin-top: 5rem;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .nav {
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
